@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Парсер отзывов (Ozon, Wildberries)",
+  "version": "1.0",
+  "description": "Расширение для парсинга данных о товаре и отзывах с ozon.ru, wildberries.ru",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://ozon.ru/*",
+    "*://wildberries.ru/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

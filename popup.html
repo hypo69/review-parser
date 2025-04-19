@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Парсер отзывов</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      min-width: 300px;
+      padding: 10px;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin: 5px 0;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>Настройки парсера</h3>
+  <!-- Поле textarea и кнопка "Сохранить промпт" оставляем, но можно закомментировать, если не нужны -->
+  <!-- <textarea id="promptInput" placeholder="Введите промпт..."></textarea> -->
+  <!-- <button id="savePromptBtn">Сохранить промпт</button> -->
+  
+  <!-- Новый чекбокс для Wildberries -->
+  <label>
+    <input type="checkbox" id="parseSellerAnswerChk">
+    Парсить ответ продавца Wildberries
+  </label>
+  
+  <hr>
+  <!-- Кнопка для начала парсинга -->
+  <button id="parseBtn">Спарсить отзывы о товаре</button>
+  
+  <!-- Контейнер для кнопки скачивания JSON (будет показан после парсинга) -->
+  <div id="downloadContainer" style="display:none; margin-top:10px;">
+    <button id="downloadBtn">Скачать json файл</button>
+  </div>
+  
+  <!-- Подключаем скрипт для popup -->
+  <script src="popup.js"></script>
+</body>
+</html>
