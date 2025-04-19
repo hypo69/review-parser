@@ -1,6 +1,17 @@
 // Элемент для сохранения полученных данных
 let parsedData = null;
 
+// Добавляем обработчик для получения HTML контента
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.html) {
+      const htmlContentDiv = document.getElementById('htmlContent');
+      htmlContentDiv.textContent = request.html;
+      document.getElementById('htmlContentContainer').style.display = 'block';
+    }
+  }
+);
+
 /*
 // Обработчик клика по заглушке "Сохранить промпт"
 document.getElementById('savePromptBtn').addEventListener('click', () => {
