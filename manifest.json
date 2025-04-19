@@ -14,8 +14,16 @@
   "host_permissions": [
     "*://ozon.ru/*",
     "*://wildberries.ru/*"
-  ],
+  ], 
   "background": {
     "service_worker": "background.js"
+  }, 
+  "permissions": ["contextMenus"],
+  "context_menus": {
+    "create": {
+      "title": "Send to assistant",
+      "contexts": ["page"]
+    }
   }
+}
 }
